@@ -1,10 +1,13 @@
 <#
     Opens File Explorer with the current wallpaper image selected.
-
-    -Index 0   first monitor  (TranscodedImageCache_000)
-    -Index 1   second monitor (TranscodedImageCache_001)
-    omitted    one wallpaper -> opens directly
-               several       -> picker with filenames and previews
+ 
+    Normal use is via the desktop right-click menu, which passes no arguments:
+        one distinct wallpaper -> Explorer opens straight away
+        several                -> picker with filenames and previews
+ 
+    -Index N selects a single monitor directly, by position among the
+    TranscodedImageCache_000, _001, ... registry values. Unused by the menu;
+    kept for calling the script by hand or from a shortcut.
 #>
 param([int]$Index = -1)
 
