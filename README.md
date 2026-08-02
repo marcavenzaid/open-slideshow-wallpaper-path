@@ -84,4 +84,3 @@ That's the reason for the picker window. It's where the per-monitor choice happe
 - **Windows Spotlight Images**: A built-in feature in Windows 10 and Windows 11 that automatically downloads and cycles through new scenery, aerial shots, and nature photography is not a folder slideshow and won't work here. Those images are extensionless files in `%LocalAppData%\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets`.
 - **Missing file:** If the image was moved or deleted since it was set, a warning dialog shows the recorded path instead.
 - **Transcoded Files**: A re-encoded, screen-cropped copy of the current wallpaper always sits at `%AppData%\Microsoft\Windows\Themes\TranscodedWallpaper`. This is handled by Windows. It has no extension but is a JPEG. It is not byte-identical to the original.
-- 
