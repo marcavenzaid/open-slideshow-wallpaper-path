@@ -8,11 +8,6 @@ It opens the location of the image currently displayed as your wallpaper.
 
 This is useful when a slideshow shows an image that you want to find, rename, or delete.
 
-It adapts to your setup on its own:
-
-- **Case 1: One wallpaper in one monitor** -> Explorer opens immediately, no dialog.
-- **Case 2: Different wallpaper per monitor** -> a picker appears listing each one by filename, with a preview. Choose one, or click **Open all**.
-
 Plugging in or unplugging a monitor needs **no** editing or reinstall.
 
 ## Contents
