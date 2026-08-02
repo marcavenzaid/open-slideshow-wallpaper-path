@@ -61,7 +61,7 @@ After that delete the folder `C:\Scripts\OpenSlideshowWallpaperPath\`
 
 Windows caches the path of the current wallpaper in the registry under `HKCU\Control Panel\Desktop`, in binary values named `TranscodedImageCache_000`, `_001`, and so on (one per monitor). 
 
-The script decodes the requested value as a UTF-16 string, skipping a 24-byte header, and passes the result to `explorer.exe /select`.
+The script decodes each value as a UTF-16 string, skipping a 24-byte header, discards duplicates, and passes the result to `explorer.exe /select`.
 
 The menu entry runs `Launch.vbs`, which starts PowerShell with its window hidden from the outset. 
 
@@ -80,7 +80,7 @@ Putting the logic in the script gets the same result with a plain `.ps1`. One st
 That's the reason for the picker window. It's where the per-monitor choice happens, since the menu itself can't offer it.
 
 ## Other
-- **Monitor numbering**: Entries follow registry order (`_000`, `_001`, ..., _n), which reflects Windows' internal display enumeration. That order might not always match the 1, 2, ..., n labels in Settings -> Display, so the two may feel swapped. The filename and preview shown for each entry are the reliable guide.
+- **Monitor numbering**: Entries follow registry order (`_000`, `_001`, ..., _n), which reflects Windows' internal display enumeration. That order might not always match the 1, 2, ..., n labels in Settings -> Display. The filename and preview shown for each entry are the reliable guide.
 - **Windows Spotlight Images**: A built-in feature in Windows 10 and Windows 11 that automatically downloads and cycles through new scenery, aerial shots, and nature photography is not a folder slideshow and won't work here. Those images are extensionless files in `%LocalAppData%\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets`.
 - **Missing file:** If the image was moved or deleted since it was set, a warning dialog shows the recorded path instead.
 - **Transcoded Files**: A re-encoded, screen-cropped copy of the current wallpaper always sits at `%AppData%\Microsoft\Windows\Themes\TranscodedWallpaper`. This is handled by Windows. It has no extension but is a JPEG. It is not byte-identical to the original.
