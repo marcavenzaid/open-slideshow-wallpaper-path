@@ -4,7 +4,7 @@
 
 Adds an **Open wallpaper location** item to the desktop right-click menu. 
 
-It opens File Explorer and selects the image currently displayed as your wallpaper. 
+It opens the location of the image currently displayed as your wallpaper. 
 
 This is useful when a slideshow shows an image that you want to find, rename, or delete.
 
