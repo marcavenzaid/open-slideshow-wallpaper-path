@@ -19,8 +19,8 @@ Plugging in or unplugging a monitor needs **no** editing or reinstall.
 
 | File | Role |
 | --- | --- |
-| `OpenSlideshowWallpaperPath.ps1` | The actual program. Don't delete. Must stay in the same location. The registry points at it. |
-| `Launch.vbs` | Starts the script with no console window. Must stay next to it. |
+| `OpenSlideshowWallpaperPath.ps1` | The actual program. **Don't delete or move to a different location.** |
+| `Launch.vbs` | What the registry points at. Starts the script with no console window, finding it in its own folder. **Don't delete or move to a different location.** |
 | `Install.ps1` | The installer. Builds the menu entry. |
 | `README.md` | This file. |
 
